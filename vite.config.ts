@@ -4,5 +4,12 @@ export default defineConfig({
   tanstackStart: {
     server: { entry: "server" },
   },
-  nitro: { preset: "vercel" },
+  nitro: {
+    preset: "vercel",
+    vercel: {
+      functions: {
+        runtime: "nodejs20.x",
+      },
+    },
+  },
 });
